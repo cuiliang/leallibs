@@ -817,6 +817,7 @@
                     input.attr('type', 'checkbox');
                     input.attr('checklist-value', field.valueTemplate);
                     input.attr("checklist-model", helpers.getNgModelStr(field, directive));
+                    input.removeAttr('ng-model');
                     label.append(input);
 
                     label.append(angular.element('<span>' + field.labelTemplate + '</span>'));
