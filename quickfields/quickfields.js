@@ -486,10 +486,10 @@
                         //    console.log('schema changed,', schema);
                         //    build(schema);
                         //}, true);
-                        $scope.$watchCollection(directive.schemaStr, function (schema) {
+                        $scope.$watch(directive.schemaStr, function (schema) {
                             //console.log('schema changed,', schema);
                             build(schema);
-                        });
+                        },true);
                         $scope.$watch(directive.formStr, function (form) {
                             directive.formContainer.attr('name', directive.formStr);
                         });
