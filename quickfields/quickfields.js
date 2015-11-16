@@ -271,8 +271,8 @@
             },
             classes: {
                 fieldContainer: ['form-group'],
-                labelContainer: ['control-label', 'col-sm-2'],
-                inputContainer: ['col-sm-10'],
+                labelContainer: ['control-label', 'col-sm-3'],
+                inputContainer: ['col-sm-9'],
                 helpBlock: ['help-block'],
                 
                 input: ['form-control'],
