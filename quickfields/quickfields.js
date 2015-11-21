@@ -734,7 +734,14 @@
                             var input = angular.element('<input/>');
                             inputFieldPartBuilder.addCommonAttributes(input, field, directive);
                             input.attr('type', 'radio');
-                            input.attr('value', option.value);
+                            if(option.hasOwnProperty('value'))
+                            {
+
+                                input.attr('value', option.value);
+                            }
+                            if (options.hasOwnProperty('ngValue')){
+                                input.attr('ng-value', option.ngValue);
+                            }
                             if (angular.isDefined(option.disabled)) {
                                 input.attr('ng-disabled', option.disabled);
                             }
