@@ -739,7 +739,7 @@
 
                                 input.attr('value', option.value);
                             }
-                            if (options.hasOwnProperty('ngValue')){
+                            if (option.hasOwnProperty('ngValue')){
                                 input.attr('ng-value', option.ngValue);
                             }
                             if (angular.isDefined(option.disabled)) {
