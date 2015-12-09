@@ -932,7 +932,13 @@
 
 
                 var ele = angular.element("<span/>");
-                ele.attr('ng-bind', directive.dataStr + '.' + field.property);
+                if (field.hasOwnProperty('displayTemplate')){
+                    ele.html(field.displayTemplate);
+                }else
+                {
+                    ele.attr('ng-bind', directive.dataStr + '.' + field.property);
+                }
+
 
                 inputContainer.append(ele);
             });
